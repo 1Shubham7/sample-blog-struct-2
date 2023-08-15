@@ -5,7 +5,7 @@ draft: false
 tags: ["tag1","tag2","tag3"]
 categories: 
     - cat1
-  slug: "blog-two"
+slug: "blog-two"
 ---
 
 blog 2
