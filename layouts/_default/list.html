@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>Blog Posts</h1>
+<ul>
+  {{ range .Site.RegularPages.ByDate.Reverse }}
+    {{ if and (eq .Section "blogs") (eq .Type "blog1") }}
+      <li>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <!-- <p>{{ .Summary }}</p> -->
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>
+{{ end }}

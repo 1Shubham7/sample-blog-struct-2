@@ -1,0 +1,37 @@
+<h1>This is a Blogs page</h1>
+
+<ul>
+    {{ range .Site.RegularPages }}
+        <li>
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          {{/*  <p>{{ .Content }}</p>  */}}
+          {{/*  <h3>Variables  -  {{ .Params.varone }}</h3>
+          <h3>{{ $myvar := "hello ji"  }}</h3>
+          <h1>{{ myvar }}</h1>  */}}
+        </li>
+    {{ end }}
+</ul>
+
+{{/*  {{ range .Site.Taxonomies.tags }}
+      <li>
+        <a  href="{{ .Page.Permalink }}"
+          >{{ .Page.Title }}
+        </a>
+      </li>
+      {{ end }}  */}}
+
+      {{/*  {{ range where .Site.RegularPages "Section" "blogs" }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+  {{ end }}  */}}
+
+  <h1>This is only blogs list</h1>
+
+  {{/*  {{ range .Site.RegularPages }}
+    {{ if eq .Section "blogs" }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  {{ end }}  */}}
+
+  {{ range .Pages }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+  {{ end }}

@@ -1,0 +1,30 @@
+
+
+<h1>Home Page</h1>
+
+<h1>Consider this as Navbar</h1>
+
+  <h1>These are range </h1>
+
+<ul style="color: red;">
+    {{ range .Site.RegularPages }}
+        <li>
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          {{/*  <p>{{ .Content }}</p>  */}}
+        </li>
+      {{ end }}
+  </ul>
+
+  {{/*  {{ range .Site.RegularPages }}
+    {{ if eq .Section "en/blogs" }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  {{ end }}  */}}
+
+
+  {{/*  <img src="{{ "/img/head-img.jpg" | absURL }}" alt="Logo">  */}}
+
+  <h1>These are links given</h1>
+
+  <h2><a href="/en/blogs">Blogs</a></h2>
+  <h2><a href="/en/community/">Community</a></h2>
